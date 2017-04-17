@@ -24,5 +24,19 @@ namespace WorkingWithAttachedProperties
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Working with Grid.RowProperty which is a DependencyProperty which is managed by .NET.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DemoButton_Click(object sender, RoutedEventArgs e)
+        {
+            int row = (int)DemoButton.GetValue(Grid.RowProperty);
+
+            row = (row + 1) % LayoutRoot.RowDefinitions.Count;
+
+            DemoButton.SetValue(Grid.RowProperty, row);
+        }
     }
 }

@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkingWithAttachedProperties"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
+        Title="MainWindow" Height="350" Width="300">
+    <Grid x:Name="LayoutRoot">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="44*"/>
+            <ColumnDefinition Width="51*"/>
+            <ColumnDefinition Width="51*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="58*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="94*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="DemoButton" Content="Click me!" Grid.Column="1" Click="DemoButton_Click"/>
+
+
     </Grid>
 </Window>
